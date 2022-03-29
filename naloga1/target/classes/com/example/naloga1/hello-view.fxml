@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.input.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="497.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.naloga1.HelloController">
+   <top>
+      <MenuBar prefHeight="26.0" prefWidth="493.0" BorderPane.alignment="CENTER">
+        <menus>
+          <Menu text="_Datoteka">
+            <items>
+              <MenuItem onAction="#odpri" text="_Odpri">
+                     <accelerator>
+                        <KeyCodeCombination alt="UP" code="O" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator></MenuItem>
+                  <MenuItem onAction="#pobrisi" text="_Pobriši">
+                     <accelerator>
+                        <KeyCodeCombination alt="UP" code="C" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator></MenuItem>
+                  <MenuItem onAction="#izhod" text="_Izhod">
+                     <accelerator>
+                        <KeyCodeCombination alt="UP" code="Q" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator></MenuItem>
+            </items>
+          </Menu>
+          <Menu text="_Izbire1">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#jizb" text="_Izbire1 J" />
+                  <MenuItem onAction="#uizb" text="_Izbire1 U" />
+                  <MenuItem onAction="#rizb" text="_Izbire1 R" />
+                  <MenuItem onAction="#eizb" text="_Izbire1 E" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="_Izbire2">
+            <items>
+                  <MenuItem onAction="#pizb" text="_Izbire2 P" />
+              <MenuItem onAction="#aizb" text="_Izbire2 A" />
+                  <MenuItem onAction="#vizb" text="_Izbire2 V" />
+                  <MenuItem onAction="#lizb" text="_Izbire2 L" />
+                  <MenuItem onAction="#oizb" text="_Izbire2 O" />
+                  <MenuItem onAction="#vizb" text="_Izbire2 V" />
+                  <MenuItem onAction="#iizb" text="_Izbire2 I" />
+                  <MenuItem onAction="#cizb" text="_Izbire2 Č" />
+            </items>
+          </Menu>
+            <Menu text="_Pomoč">
+              <items>
+                <MenuItem mnemonicParsing="false" onAction="#pomoc" text="Navodila" />
+              </items>
+            </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+   <bottom>
+      <ToolBar prefHeight="36.0" prefWidth="396.0" BorderPane.alignment="CENTER">
+         <items>
+            <Button mnemonicParsing="false" onAction="#jizb" text="I1 J" />
+            <Button mnemonicParsing="false" onAction="#uizb" text="I1 U" />
+            <Button mnemonicParsing="false" onAction="#rizb" text="I1 R" />
+            <Button mnemonicParsing="false" onAction="#eizb" text="I1 E" />
+            <Button mnemonicParsing="false" onAction="#pizb" text="I2 P" />
+            <Button mnemonicParsing="false" onAction="#aizb" text="I2 A" />
+            <Button mnemonicParsing="false" onAction="#vizb" text="I2 V" />
+            <Button mnemonicParsing="false" onAction="#lizb" text="I2 L" />
+            <Button mnemonicParsing="false" onAction="#oizb" text="I2 O" />
+            <Button mnemonicParsing="false" onAction="#vizb" text="I2 V" />
+            <Button mnemonicParsing="false" onAction="#iizb" text="I2 I" />
+            <Button mnemonicParsing="false" onAction="#cizb" text="I2 C" />
+         </items></ToolBar>
+   </bottom>
+   <center>
+      <BorderPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <bottom>
+            <Label fx:id="status" text="" BorderPane.alignment="CENTER_LEFT" />
+         </bottom>
+         <center>
+            <Pane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <children>
+                  <ComboBox fx:id="comboBox" layoutX="253.0" layoutY="23.0" prefHeight="26.0" prefWidth="168.0" promptText="izbira">
+
+                        </ComboBox>
+                  <Spinner fx:id="spin" layoutX="32.0" layoutY="170.0">
+                      <valueFactory>
+                          <SpinnerValueFactory.IntegerSpinnerValueFactory max="20" min="0" />
+                      </valueFactory>
+                  </Spinner>
+                  <RadioButton fx:id="odstrZ" layoutX="276.0" layoutY="74.0" mnemonicParsing="false" onAction="#odstrZ" text="Odstrani izbranega" />
+                  <TextField fx:id="elem" layoutX="32.0" layoutY="21.0" prefHeight="31.0" prefWidth="190.0" />
+                  <RadioButton fx:id="odstr1" layoutX="127.0" layoutY="74.0" mnemonicParsing="false" onAction="#odstr1" text="Odstrani prvega" />
+                  <RadioButton fx:id="dodaj" layoutX="32.0" layoutY="74.0" mnemonicParsing="false" onAction="#dodaj" text="Dodaj" />
+                  <CheckBox fx:id="check" layoutX="117.0" layoutY="131.0" mnemonicParsing="false" text="Prepovej duplikate" />
+                  <Button layoutX="32.0" layoutY="127.0" mnemonicParsing="false" onAction="#izvedi" text="Izvedi" />
+                  <Label fx:id="sporocilo" layoutX="32.0" layoutY="208.0" />
+               </children>
+            </Pane>
+         </center>
+      </BorderPane>
+   </center>
+</BorderPane>
